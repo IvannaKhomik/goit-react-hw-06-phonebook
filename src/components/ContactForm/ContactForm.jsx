@@ -1,10 +1,10 @@
 import React, { useState, useId } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'redux/actions';
 import { nanoid } from 'nanoid';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { getContacts } from 'redux/selectors';
 import { Form, FormLabel, InputField, SubmitBtn } from './ContactForm.styled';
+import { addContact } from 'redux/contactsSlice';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
